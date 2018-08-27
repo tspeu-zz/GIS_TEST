@@ -4,27 +4,41 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
+import { Geolocation } from '@ionic-native/geolocation';
+import { IonicStorageModule } from '@ionic/storage';
+
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { OpensourcePage } from '../pages/opensource/opensource';
+import { GeotrackingPage } from '../pages/geotracking/geotracking';
+import { LeafletMapPage } from '../pages/leaflet-map/leaflet-map';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage, 
+    OpensourcePage, 
+    GeotrackingPage, 
+    LeafletMapPage
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
+    IonicStorageModule.forRoot(),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage, 
+    OpensourcePage, 
+    GeotrackingPage, 
+    LeafletMapPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Geolocation
   ]
 })
 export class AppModule {}

@@ -1,14 +1,46 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      Ionic GEOTESTER
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+
+  
+    <ion-card>
+      <img src="assets/imgs/globe.jpg" style="height: 200px;"/>
+      <div class="card-title">*instalar npm install ol </div>
+      <div class="card-subtitle">OpenLayer@5.1.3| npm install @types/ol</div>
+      <button ion-button block (click)="gotoPage('OpenLayer')">Go to OpenLayer Map</button>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/imgs/map.jpg"  style="height: 200px;"/>
+      <div class="card-title">* </div>
+      <div class="card-subtitle"></div>
+      <button ion-button block (click)="gotoPage('Geo')">Go to Geotracking Map</button>
+    </ion-card>
+
+    <ion-card>
+      <img src="assets/imgs/world-map.jpg"  style="height: 200px;"/>
+      <div class="card-title">* </div>
+      <div class="card-subtitle"></div>
+      <button ion-button block (click)="gotoPage('Leaflet')">Go to Leaft Map</button>
+    </ion-card>
+
+
+
+
+<button ion-button full>Full Button</button>
+
+<button ion-button small>Small</button>
+<button ion-button>Default</button>
+<button ion-button large>Large</button>
+<button ion-button color="secondary" round>Secondary Round</button>
+<button ion-button color="danger" round>Danger Round</button>
+<button ion-button color="dark" round>Dark Round</button>
+
+</ion-content><
